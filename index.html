@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <!--* fontawesome Css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <!--* bootstrap Css  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!--* Main Css -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section>
+      <div
+        class="container d-flex flex-column justify-content-center align-content-center"
+      >
+        <!--& Main-title  -->
+        <div class="main-title text-center">
+          <h1>
+            Bookmarker
+            <div class="layer"></div>
+          </h1>
+        </div>
+        <!--&===============-->
+
+        <div
+          class="bookmark-body d-flex flex-column justify-content-center align-content-center"
+        >
+          <!--& Content-title  -->
+          <div class="body-title text-center">
+            <h2>
+              <i class="fa-solid fa-bookmark fa-sm"></i>
+              Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark fa-sm"></i>
+            </h2>
+          </div>
+          <!--&=================-->
+
+          <!--& Content-body -->
+          <div class="my-3 site-name">
+            <!--~ Name-input  -->
+            <label for="bookmarkName" class="form-label">
+              <i class="fa-solid fa-book-bookmark"></i> Site Name
+            </label>
+            <input
+              oninput="validationName()"
+              type="text"
+              class="form-control input-color"
+              id="bookmarkName"
+              placeholder="Bookmark Name"
+            />
+            <p id="msgName" class="alert alert-danger p-1 small w-50 d-none">
+              It must start with a letter, be 3 to 10 characters long, and can
+              only contain letters, numbers, hyphens, or underscores.
+            </p>
+          </div>
+          <!--~================ -->
+
+          <!--~ URL-input -->
+          <div class="my-3 site-url">
+            <label for="bookmarkURL" class="form-label">
+              <i class="fa-solid fa-link"></i> Site URL
+            </label>
+            <input
+              oninput="validationURL()"
+              type="text"
+              class="form-control input-color"
+              id="bookmarkURL"
+              placeholder="Website URL"
+            />
+            <p id="msgURL" class="alert alert-danger p-1 small w-50 d-none">
+              Please put full URL.
+            </p>
+          </div>
+          <!--~===============  -->
+
+          <!--!BUTTON  -->
+          <div class="sub-btn text-center my-3">
+            <button onclick="addSite()" class="btn btn-lg">Submit</button>
+          </div>
+          <!--!=======  -->
+        </div>
+        <!--&====================  -->
+
+        <!--& Display  -->
+        <div>
+          <table class="my-table table  text-center ">
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="bookmarkTable" class="my-table-body"></tbody>
+          </table>
+        </div>
+        <!--&=================== -->
+      </div>
+    </section>
+
+    <!--* bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!--* Main js  -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

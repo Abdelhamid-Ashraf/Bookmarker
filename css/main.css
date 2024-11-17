@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: "Righteous";
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url(../fonts/PTSansCaption-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #031716 ,#274D60 );
+}
+
+/*~ Main Title Start */
+
+.container .main-title h1 {
+  font-family: "Pacifico";
+  font-size: 50px;
+  font-weight: 500;
+  color: #065561;
+  text-shadow: 0 0 5px #6ba3be;
+  margin-block: 50px;
+  position: relative;
+}
+
+.container .main-title h1::after {
+  content: "";
+  position: absolute;
+  background-color: #6ba3be;
+  width: 21%;
+  height: 20px;
+  top: 69%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius:3px  ;
+}
+.container .main-title h1 .layer {
+  content: "";
+  position: absolute;
+  background-color: #6ba3be;
+  width: 21%;
+  height: 25px;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  transition: top 0.5s;
+  border-radius:3px ;
+}
+.container .main-title h1:hover .layer {
+  top: 35%;
+}
+/*~ Main Title End */
+
+/*~ Bookmark-body Start */
+.container .bookmark-body {
+  margin-block: 20px;
+  border-block: 3px dotted #6ba3be;
+  padding: 10px;
+}
+
+.container .bookmark-body .body-title h2 {
+  font-family: "Righteous";
+  font-size: 25px;
+  font-weight: 500;
+  margin-block: 20px;
+  color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 223, 82),
+    rgb(24, 128, 0)
+  );
+}
+.container .bookmark-body .input-color{
+  background-color:#8bcaea ;
+  border: 1px solid ;
+  
+}
+.container .bookmark-body .site-name,
+.container .bookmark-body .site-url {
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(103, 168, 0);
+}
+
+.container .bookmark-body .sub-btn button {
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #6ba3be;
+  padding: 7px 50px;
+  transition: background-color 0.5s;
+}
+
+.container .bookmark-body .sub-btn button:hover {
+  background-color: #406b81;
+}
+
+/*~ Bookmark-body End */
+
+/*~ Bookmark-list End */
+.container .my-table {
+  border: 0 ;
+}
+.container .my-table  th{
+  background-color: #6ba3be;
+}
+.container .my-table .my-table-body td{
+  background-color: #6ba3be;
+}
+.container .my-table .my-table-body {
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 800;
+  
+}
+.container .my-table .my-table-body a {
+  border: 1px solid ;
+  border-radius: 5px;
+  background-color: #274D60;
+  color: #fff;
+  padding: 7px 18px;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 400;
+  transition: background-color 0.3s ease-in-out;
+}
+.container .my-table .my-table-body a:hover {
+  background-color: #1c3744;
+}
+
+.container .my-table .my-table-body .dl-btn {
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: #711373;
+  color: #fff;
+  padding: 7px 18px;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-weight: 400;
+  transition: background-color 0.3s ease-in-out;
+}
+.container .my-table .my-table-body .dl-btn:hover {
+  background-color: #4d0c4e;
+}
+/*~ Bookmark-list End */
